@@ -130,6 +130,9 @@ main {
   display: block;
   width: 100%;
   height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center 12%;
   background: var(--photo);
 }
 
@@ -184,7 +187,6 @@ main {
 }
 
 .now h2,
-.news h2,
 .page-title {
   margin: 0 0 0.45rem;
   font-size: 0.72rem;
@@ -200,38 +202,6 @@ main {
 
 .now p {
   margin: 0;
-}
-
-.news {
-  max-width: var(--measure);
-  margin-top: 2.1rem;
-}
-
-.news-list,
-.cv-list,
-.talk-list,
-.note-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.dated {
-  display: grid;
-  grid-template-columns: 4.6rem minmax(0, 1fr);
-  gap: 0.2rem 0.95rem;
-  padding: 0.42rem 0;
-  border-top: 1px solid var(--rule);
-}
-
-.dated:last-child {
-  border-bottom: 1px solid var(--rule);
-}
-
-.dated .when {
-  font-variant-numeric: oldstyle-nums;
-  color: var(--muted);
-  font-size: 0.92rem;
 }
 
 .paper {
@@ -256,26 +226,25 @@ main {
 }
 
 .paper .meta,
-.talk .venue,
-.note .meta {
+.talk .venue {
   color: var(--muted);
   font-size: 0.95rem;
 }
 
-.paper .actions {
+.actions {
   margin: 0.2rem 0 0;
   font-size: 0.88rem;
 }
 
-.paper .actions a {
+.actions a {
   text-decoration: none;
 }
 
-.paper .actions a:hover {
+.actions a:hover {
   text-decoration: underline;
 }
 
-.paper .actions a + a::before {
+.actions a + a::before {
   content: " · ";
   color: var(--rule);
   text-decoration: none;
@@ -297,19 +266,16 @@ main {
   color: var(--muted);
 }
 
-.talk,
-.note {
+.talk {
   padding: 0.75rem 0;
   border-top: 1px solid var(--rule);
 }
 
-.talk:last-child,
-.note:last-child {
+.talk:last-child {
   border-bottom: 1px solid var(--rule);
 }
 
-.talk .title,
-.note .title {
+.talk .title {
   font-style: italic;
 }
 
@@ -319,40 +285,13 @@ main {
   font-weight: 600;
 }
 
-.teaching h2:first-child {
+.teaching h2:first-of-type {
   margin-top: 0;
 }
 
 .teaching p {
   margin: 0 0 0.85rem;
   max-width: var(--measure);
-}
-
-.cv-block {
-  margin-top: 1.55rem;
-}
-
-.cv-block h2 {
-  margin: 0 0 0.4rem;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--muted);
-  padding-bottom: 0.3rem;
-  border-bottom: 1px solid var(--ink);
-}
-
-.cv-list li {
-  display: grid;
-  grid-template-columns: 5.4rem minmax(0, 1fr);
-  gap: 0.15rem 1rem;
-  padding: 0.38rem 0;
-}
-
-.cv-list .when {
-  font-variant-numeric: oldstyle-nums;
-  color: var(--muted);
 }
 
 .site-footer {
@@ -382,9 +321,7 @@ main {
     font-size: 1.75rem;
   }
 
-  .dated,
-  .paper,
-  .cv-list li {
+  .paper {
     grid-template-columns: 1fr;
     gap: 0.1rem;
   }
