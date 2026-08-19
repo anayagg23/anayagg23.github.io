@@ -187,7 +187,6 @@ main {
 }
 
 .now h2,
-.contact h2,
 .page-title {
   margin: 0 0 0.45rem;
   font-size: 0.72rem;
@@ -203,15 +202,6 @@ main {
 
 .now p {
   margin: 0;
-}
-
-.contact {
-  max-width: var(--measure);
-  margin-top: 2.1rem;
-}
-
-.contact p {
-  margin: 0 0 0.4rem;
 }
 
 .paper {
